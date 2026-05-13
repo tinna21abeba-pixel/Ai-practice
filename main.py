@@ -1,20 +1,17 @@
-from src.math_utilis import add, multiply
-from src.file_utilis import save_text
+import yfinance as yf
 
-# Use functions from modules
-sum_result = add(10, 5)
-product_result = multiply(4, 6)
+data= yf.download("AAPL", start="2020-01-01", end="2026-3-30")
+print(data.head())
 
+def save_text(filename, text):
+    with open(filename, 'w') as file:
+        file.write(text)
 
-# Display results
-print("Sum:", sum_result)
-print("Product:", product_result)
 
 
 # Save results to a file
 report = f"""
-Sum: {sum_result}
-Product: {product_result}
+result:{data}
 
 """
 

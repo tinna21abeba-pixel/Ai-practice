@@ -1,4 +1,1 @@
-
-Sum: 15
-Product: 24
-Square: 49
+The result is 15
